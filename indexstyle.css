@@ -1,9 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-/* RESET */
-body {
+
+/* ================= RESET ================= */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* prevents right-side gap issue */
+}
+
+/* ================= BODY ================= */
+body {
     font-family: Arial, sans-serif;
     color: #fff;
 }
@@ -15,18 +27,19 @@ header {
     align-items: center;
     padding: 15px 40px;
     background: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    width: 95%;
+
+    position: fixed;   /* changed from absolute */
     top: 0;
     left: 0;
+
+    width: 100%;       /* FIXED */
+    z-index: 1000;
 }
 
-/* LOGO (top-left) */
 header img {
     height: 50px;
 }
 
-/* LINKS (top-right) */
 header a {
     color: white;
     text-decoration: none;
@@ -43,24 +56,22 @@ header a:hover {
     border: 1px solid rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
     color: #90ee90;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-/* ================= HERO SECTION ================= */
+/* ================= MAIN HERO ================= */
 main {
-    padding-top: 120px;
-}
+    min-height: 100vh;
+    width: 100%;
 
-/* BACKGROUND IMAGE AREA (YOU ADD IMAGE HERE) */
-main {
-    background-image: url("img/apple.jpg"); /* 🔴 PUT YOUR IMAGE HERE */
+    background-image: url("img/apple.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+
+    padding-top: 100px; /* space for fixed header */
 }
 
-/* CENTER TEXT BLOCK */
+/* HERO TEXT */
 nav:first-of-type {
     text-align: center;
     margin-top: 80px;
@@ -68,7 +79,6 @@ nav:first-of-type {
 
 nav:first-of-type h1 {
     font-size: 60px;
-    margin: 10px 0;
     letter-spacing: 3px;
     font-family: 'Playfair Display', serif;
     text-transform: uppercase;
@@ -77,17 +87,15 @@ nav:first-of-type h1 {
 
 nav:first-of-type p {
     font-size: 20px;
-    margin-bottom: 20px;
-    color: #ffffff;
+    margin: 15px 0;
+    color: #fff;
     font-weight: 500;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
     background: rgba(0, 0, 0, 0.25);
     display: inline-block;
     padding: 6px 12px;
     border-radius: 8px;
 }
 
-/* ORDER BUTTON */
 nav:first-of-type a {
     display: inline-block;
     padding: 12px 30px;
@@ -102,34 +110,22 @@ nav:first-of-type a {
 nav:first-of-type a:hover {
     transform: translateY(-5px) scale(1.08);
     background: #27ae60;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
-nav:first-of-type a:active {
-    transform: scale(0.95);
-}
-
-/* ================= VARIETIES SECTION ================= */
-
+/* ================= VARIETIES ================= */
 .varieties {
     background: rgba(0, 0, 0, 0.6);
     padding: 60px 20px;
     text-align: center;
-    margin-top: 80px;
 }
 
-/* Title */
 .varieties h1 {
     font-size: 42px;
     margin-bottom: 40px;
     font-family: 'Poppins', sans-serif;
-    letter-spacing: 2px;
     text-transform: uppercase;
-    color: #ffffff;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
 
-/* Container for boxes */
 .box-container {
     display: flex;
     justify-content: center;
@@ -137,34 +133,30 @@ nav:first-of-type a:active {
     flex-wrap: wrap;
 }
 
-/* Each box */
 .box {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(6px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     padding: 20px;
     width: 280px;
-    color: white;
     transition: 0.3s;
 }
 
-/* Hover effect */
 .box:hover {
     transform: translateY(-8px);
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Box heading */
 .box h2 {
     color: #90ee90;
-    margin-bottom: 10px;
 }
+
+/* ================= FOOTER ================= */
 footer {
+    width: 100%;              /* FIXED */
     background-color: rgba(0, 0, 0, 0.85);
     color: white;
     text-align: center;
     padding: 20px;
     font-size: 14px;
-    margin-top: 0px;
 }
