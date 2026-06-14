@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+/* RESET */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* ================= HEADER ================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    width: 95%;
+    top: 0;
+    left: 0;
+}
+
+/* LOGO (top-left) */
+header img {
+    height: 50px;
+}
+
+/* LINKS (top-right) */
+header a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    border: 1px solid transparent;
+}
+
+header a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    color: #90ee90;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ================= HERO SECTION ================= */
+main {
+    padding-top: 120px;
+}
+
+/* BACKGROUND IMAGE AREA (YOU ADD IMAGE HERE) */
+main {
+    background-image: url("img/apple.jpg"); /* 🔴 PUT YOUR IMAGE HERE */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* CENTER TEXT BLOCK */
+nav:first-of-type {
+    text-align: center;
+    margin-top: 80px;
+}
+
+nav:first-of-type h1 {
+    font-size: 60px;
+    margin: 10px 0;
+    letter-spacing: 3px;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+}
+
+nav:first-of-type p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: 500;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.25);
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+/* ORDER BUTTON */
+nav:first-of-type a {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #2ecc71;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+nav:first-of-type a:hover {
+    transform: translateY(-5px) scale(1.08);
+    background: #27ae60;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+nav:first-of-type a:active {
+    transform: scale(0.95);
+}
+
+/* ================= VARIETIES SECTION ================= */
+
+.varieties {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* Title */
+.varieties h1 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Container for boxes */
+.box-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Each box */
+.box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.box:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Box heading */
+.box h2 {
+    color: #90ee90;
+    margin-bottom: 10px;
+}
+footer {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top: 50px;
+}
