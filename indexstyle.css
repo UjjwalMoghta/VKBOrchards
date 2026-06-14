@@ -17,12 +17,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    background: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    width: 95%;
-    top: 0;
-    left: 0;
+    flex-wrap: wrap;   /* ⭐ important */
+    padding: 10px 20px;
+    width: 100%;
 }
 
 /* LOGO (top-left) */
